@@ -1,0 +1,210 @@
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0a0a0f;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    z-index: 1000; /* Mantém a sidebar acima de outros elementos */
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Esconde a sidebar movendo-a para a esquerda */
+}
+
+/* Sidebar links */
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #e51209;
+    color: white;
+}
+
+/* Sidebar title */
+.sidebar-title {
+    font-weight: bold;
+    padding: 15px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 250px; /* Margem esquerda da sidebar */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #181818; /* Cor de fundo do conteúdo principal */
+    min-height: calc(100vh - 60px); /* Altura mínima do conteúdo */
+    color: #fff; /* Cor do texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhamento do conteúdo */
+}
+
+/* Footer styles */
+footer {
+    width: calc(100% - 250px);
+    position: relative;
+    bottom: 0;
+    left: 250px;
+    background-color: #181818;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Social icons */
+.social-icons i {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Logo size */
+.logo {
+    width: 150px;
+}
+
+/* Collapse toggle arrow animation */
+.collapse-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.collapse-toggle.collapsed svg {
+    transform: rotate(-90deg);
+}
+
+.collapse-toggle svg {
+    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.collapse.show svg {
+    transform: rotate(0deg);
+}
+
+/* Menu button */
+.menuButton {
+    position: absolute; /* Posiciona o botão no canto */
+    top: 10px; /* Ajuste a posição vertical */
+    left: 10px; /* Ajuste a posição horizontal */
+    padding: 10px; /* Aumenta o tamanho do botão */
+    background-color: #f8f9fa; /* Cor de fundo do botão */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.menuButton:hover {
+    background-color: #e9ecef; /* Cor ao passar o mouse */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed; /* Mantém a sidebar fixa em mobile */
+        width: 100%; /* Sidebar ocupa 100% da largura em mobile */
+        height: 100%; /* Altura se ajusta ao conteúdo */
+    }
+    .main-content {
+        margin-left: 0; /* Sem margem esquerda em mobile */
+        padding: 20px; /* Espaçamento interno */
+    }
+    footer {
+        width: 100%; /* Largura total do footer */
+        left: 0; /* Alinhamento do footer */
+    }
+}
+
+/* Estilos adicionais para os cards */
+@media (min-width: 769px) {
+    #tinderContent .card,
+    #disneyContent .card,
+    #netflixContent .card {
+        min-width: 200px; /* Define uma largura mínima para o card no desktop */
+        max-width: 400px; /* Define uma largura máxima para o card no desktop */
+        width: 100%; /* Garante que o card utilize 100% da largura do contêiner */
+    }
+
+    #tinderContent .card img,
+    #disneyContent .card img,
+    #netflixContent .card img {
+        height: 200px; /* Altura fixa para a imagem do card */
+        object-fit: cover; /* Mantém a proporção da imagem */
+    }
+
+    #tinderContent .card-title,
+    #disneyContent .card-title,
+    #netflixContent .card-title {
+        font-size: 1.2rem; /* Aumenta um pouco o tamanho do título */
+        margin-bottom: 0.5rem; /* Espaçamento inferior para separar do preço */
+    }
+
+    #tinderContent .btn,
+    #disneyContent .btn,
+    #netflixContent .btn {
+        font-size: 1.2rem; /* Tamanho do botão */
+        padding: 10px 15px; /* Espaçamento do botão */
+        margin-top: 1rem; /* Espaçamento superior para separar do título/preço */
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    #tinderContent .card img,
+    #disneyContent .card img,
+    #netflixContent .card img {
+        height: auto; /* Ajusta a altura da imagem para ocupar o espaço disponível */
+    }
+
+    #tinderContent .card-title,
+    #disneyContent .card-title,
+    #netflixContent .card-title {
+        font-size: 1rem; /* Reduz o tamanho do título para dispositivos móveis */
+    }
+
+    #tinderContent .btn,
+    #disneyContent .btn,
+    #netflixContent .btn {
+        font-size: 1rem; /* Reduz o tamanho do botão para dispositivos móveis */
+    }
+}
+
+.carousel-item {
+    transition: opacity 1ms ease-in-out; /* Transição suave para a opacidade */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Ajusta a altura máxima da imagem */
+    object-fit: cover; /* Corta a imagem para manter a proporção */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro para os controles */
+    border-radius: 50%; /* Bordas arredondadas */
+}
+

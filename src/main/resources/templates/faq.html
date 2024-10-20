@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/all.css" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Container flexível para sidebar e conteúdo principal -->
+   <div class="d-flex" style="min-height: 100vh;">
+
+       <!-- Sidebar -->
+       <div class="sidebar d-flex flex-column align-items-center text-center bg-dark p-3">
+           <!-- Logo -->
+           <a class="navbar-brand" href="/">
+               <img src="images/logo.png" class="logo" alt="Gorilla Store">
+           </a>
+           <div class="sidebar-title text-light">Produtos</div>
+           <!-- Collapsible Assinaturas section -->
+           <a data-toggle="collapse" data-target="#assinaturasCollapse" aria-expanded="false" class="collapse-toggle collapsed text-light">
+               <span>Assinaturas</span>
+               <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+               </svg>
+           </a>
+           <div id="assinaturasCollapse" class="collapse">
+               <a href="/tinder" id="tinderLink" class="pl-4 text-light">Tinder</a>
+               <a href="/netflix" id="netflixLink" class="pl-4 text-light">Netflix</a>
+               <a href="/disney" id="disneyLink" class="pl-4 text-light">Disney+</a>
+           </div>
+           <div class="sidebar-title text-light">Outros</div>
+           <a href="/faq" id="faqLink" class="pl-4 text-light">FAQ's</a>
+           <a href="/about" id="aboutLink" class="pl-4 text-light">Sobre</a>
+           <a href="/contato" id="contatoLink" class="pl-4 text-light">Contato</a>
+           
+           <!-- Login Button -->
+           <div class="navbar-nav mt-auto">
+               <a class="nav-item nav-link text-light" href="/login">
+                   <i class="fas fa-sign-in-alt"></i> Entrar
+               </a>
+           </div>
+       </div>
+
+       <!-- Main content -->
+       <div id="mainContent" class="main-content flex-grow-1 d-flex justify-content-center align-items-center bg-secondary" style="display: none;">
+
+
+         <!-- Conteúdo específico para FAQ -->
+         <div id="faqContent" class="row justify-content-center">
+            <h2 class="mb-4 text-center">Perguntas Frequentes (FAQ)</h2>
+            <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <div class="card mb-3">
+                     <div class="card-body">
+                        <div class="text-center">
+                           <h5 class="card-title">Como posso comprar uma assinatura?</h5>
+                        </div>
+                        <p class="card-text text-justify">
+                           Basta selecionar a plataforma desejada, escolher o tipo de assinatura, efetuar o pagamento e receber o código por e-mail.</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-lg-4 col-md-6">
+                  <div class="card mb-3">
+                     <div class="card-body">
+                        <div class="text-center">
+                           <h5 class="card-title">Quais métodos de pagamento são aceitos?</h5>
+                        </div>
+                        <p class="card-text text-justify">
+                           Aceitamos cartão de crédito, PayPal e outras opções de pagamento seguras.</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-4 col-md-6">
+                  <div class="card mb-3">
+                     <div class="card-body">
+                        <div class="text-center">
+                           <h5 class="card-title">Como ativar meu código de assinatura?</h5>
+                        </div>
+                        <p class="card-text text-justify">
+                           Você receberá instruções específicas por e-mail após a compra.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Botão para voltar no mobile -->
+         <button class="menuButton btn d-md-none">
+         <i class="fas fa-bars"></i> <!-- Ícone de três tracinhos -->
+         </button>
+
+       </div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="bg-dark text-light d-flex justify-content-center align-items-center">
+       <div class="container text-center">
+           <p>© 2024 GorillaStore, Inc. Todos os direitos reservados.</p>
+           <p>Não temos nenhuma afiliação, associação ou endosse com as plataformas nas quais os serviços são revendidos aqui. Todos os direitos autorais, marcas registradas, imagens e logotipos pertencem aos seus respectivos proprietários.</p>
+           <!-- Social media icons -->
+           <div class="social-icons">
+               <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+               <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+               <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+               <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+               <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+           </div>
+
+           <p>Design by @onlyzwei</p>
+       </div>
+   </footer>
+
+   <script src="js/jquery-3.3.1.js"></script>
+   <script src="js/popper.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <script src="js/script.js"></script>
+
+</body>
+
+</html>
